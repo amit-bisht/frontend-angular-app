@@ -1,0 +1,19 @@
+<app-loader *ngIf="isLoading && userInfo==null"></app-loader>
+<div class="container" *ngIf="!isLoading && userInfo">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{{ userInfo.avatar_url }}" class="rounded-circle" height="150" width="150">
+        </div>
+        <div class="col-md-9">
+            <span class="h4">{{ userInfo.login }}</span><br />
+            <span class="h6">{{ userInfo.bio }}</span><br />
+            <span class="h6">{{ userInfo.location }}</span><br />
+            <span>{{ userInfo.twitter_username}}</span>
+        </div>
+        <div class="col">
+            <a href="{{ userInfo.html_url }}" target="_blank">{{ userInfo.html_url}}</a>
+        </div>
+    </div>
+    <app-repos-item [repos]="userGithubRepo">
+    </app-repos-item>
+</div>

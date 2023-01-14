@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-sm-5 my-1" *ngFor="let repoInfo of repos;let i=index">
+        <div class="card">
+            <div class="card-body">
+                <a href="{{ repoInfo.clone_url }}" target="_blank" class="card-title">{{ repoInfo.name }}</a>
+                <p class="card-text">{{ repoInfo.description }}</p>
+                <p *ngIf="repoInfo.topics.length<=0">No Topics to be displayed</p>
+                <span class="badge bg-primary py-2 px-2 mx-2" *ngFor="let topic of repoInfo.topics">{{topic}}</span>
+            </div>
+        </div>
+    </div>
+</div>

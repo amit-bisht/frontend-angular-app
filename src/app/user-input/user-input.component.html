@@ -1,0 +1,10 @@
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="mb-3">
+        <label for="userid" class="form-label">Enter Git-Hub Username</label>
+        <input type="text" class="form-control" id="userid" name="userid" ngModel #userid="ngModel" required>
+        <span *ngIf="!userid.valid && userid.touched">Please enter the user name</span>
+    </div>
+    <div class="mb-3">
+        <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
