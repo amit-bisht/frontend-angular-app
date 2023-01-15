@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Install guide on local development
+
+### Clone the repo
+
+```$ git clone https://github.com/amit-bisht/frontend-angular-app```
+#####
+
+
+### Install dependencies
+
+```$ npm install```
+
+### Running on development machine
+```
+ng serve
+```
