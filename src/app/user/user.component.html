@@ -1,19 +1,19 @@
-<app-loader *ngIf="isLoading && userInfo==null"></app-loader>
-<div class="container" *ngIf="!isLoading && userInfo">
-    <div class="row">
-        <div class="col-md-3">
-            <img src="{{ userInfo.avatar_url }}" class="rounded-circle" height="150" width="150">
-        </div>
-        <div class="col-md-9">
-            <span class="h4">{{ userInfo.login }}</span><br />
-            <span class="h6">{{ userInfo.bio }}</span><br />
-            <span class="h6">{{ userInfo.location }}</span><br />
-            <span>{{ userInfo.twitter_username}}</span>
-        </div>
-        <div class="col">
-            <a href="{{ userInfo.html_url }}" target="_blank">{{ userInfo.html_url}}</a>
-        </div>
+<app-loader *ngIf="isUserInfoLoading && userInfo==null && isUserRepoLoading"></app-loader>
+<div class="container my-5" *ngIf="!isUserInfoLoading && userInfo && !isUserRepoLoading">
+  <div class="row my-4">
+    <div class="col-md-3">
+      <img [src]="userInfo.avatar_url?userInfo.avatar_url:'assets/default.png'" class="rounded-circle" height="150" width="150">
     </div>
-    <app-repos-item [repos]="userGithubRepo">
-    </app-repos-item>
+    <div class="col-md-9">
+      <span id="name">{{ userInfo.login }}</span><br />
+      <span class="user-info">{{ userInfo.bio ? userInfo.bio : '(No Bio mentioned)' }}</span><br />
+      <span class="user-info"><i class="fa-solid fa-location-dot mx-1"></i>{{ userInfo.location ?userInfo.location : '(No Location mentioned)' }}</span><br />
+      <span class="user-info">{{ userInfo.twitter_username ? userInfo.twitter_username : '(No Twitter Id present)'}}</span>
+    </div>
+    <div class="col">
+      <a href="{{ userInfo.html_url }}" target="_blank">{{ userInfo.html_url}}</a>
+    </div>
+  </div>
+  <app-repos-item [repos]="userGithubRepo">
+  </app-repos-item>
 </div>

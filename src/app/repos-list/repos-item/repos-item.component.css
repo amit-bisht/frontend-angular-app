@@ -1,0 +1,12 @@
+#repo-name {
+  font-size: 22px;
+  font-weight: bolder;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin: 2px;
+}
+
+.repo-desc {
+  font-size: 16px;
+  font-size: bold;
+}

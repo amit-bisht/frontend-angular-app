@@ -1,7 +1,16 @@
-input.ng-invalid.ng-touched{
-    border: 1px solid red;
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
 }
-span{
-    color: red;
-    font-weight: bold;
+
+span {
+  color: red;
+  font-weight: bold;
 }
+
+button {
+  cursor: pointer;
+}
+
+  button:disabled {
+    cursor: no-drop;
+  }
