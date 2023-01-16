@@ -9,8 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { UserInputComponent } from './user-input/user-input.component';
 import { UserComponent } from './user/user.component';
-import { ReposListComponent } from './repos-list/repos-list.component';
-import { ReposItemComponent } from './repos-list/repos-item/repos-item.component';
+import { ReposItemComponent } from './repos-item/repos-item.component';
 import { LoaderComponent } from './loader/loader.component';
 import { UserNotFoundComponent } from './user-not-found/user-not-found.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -22,7 +21,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeaderComponent,
     UserInputComponent,
     UserComponent,
-    ReposListComponent,
     ReposItemComponent,
     LoaderComponent,
     UserNotFoundComponent,
