@@ -5,7 +5,7 @@
         <a href="{{ repoInfo.clone_url }}" id="repo-name" target="_blank" class="card-title">{{ repoInfo.name }}</a>
         <p class="card-text repo-desc">{{ repoInfo.description }}</p>
         <p *ngIf="repoInfo.topics.length<=0">No Topics to be displayed</p>
-        <span class="badge bg-primary py-2 px-2 mx-2" *ngFor="let topic of repoInfo.topics">{{topic}}</span>
+        <span class="badge bg-primary py-2 px-2 mx-2 my-2" *ngFor="let topic of repoInfo.topics">{{topic}}</span>
       </div>
     </div>
   </div>
