@@ -8,7 +8,8 @@
       <span id="name">{{ userInfo.login }}</span><br />
       <span class="user-info">{{ userInfo.bio ? userInfo.bio : '(No Bio mentioned)' }}</span><br />
       <span class="user-info"><i class="fa-solid fa-location-dot mx-1"></i>{{ userInfo.location ?userInfo.location : '(No Location mentioned)' }}</span><br />
-      <span class="user-info">{{ userInfo.twitter_username ? userInfo.twitter_username : '(No Twitter Id present)'}}</span>
+      <i class="fa-brands fa-square-twitter mx-2"></i><a *ngIf=" userInfo.twitter_username" class="user-info" routerLink="https://twitter.com/{{ userInfo.twitter_username }}">{{userInfo.twitter_username}}</a>
+      <span *ngIf="!userInfo.twitter_username">(No Twitter Id present)</span>
     </div>
     <div class="col">
       <a href="{{ userInfo.html_url }}" target="_blank">{{ userInfo.html_url}}</a>
